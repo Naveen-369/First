@@ -13,4 +13,4 @@ while Mainmenu!=3:
     elif Mainmenu==2:
         All.cancel()
         total_seat=total_seat-1
-print("Book your seats before everyseats gets booked.Because only ",total_seat,"seats are pending.")
+print("Book your seats before everyseats gets booked.Because only ",total_seat,"seats are pending.") 
