@@ -1,0 +1,3 @@
+import All
+All.buy()
+
