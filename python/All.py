@@ -101,8 +101,10 @@ def buy():
         v=open("details.txt","a")
         dl=dl+"\n"
         v.write(dl)
+    v.write("Thank you for using this program.")
     v.write("\n\n\n")
-    v.write(amt_tobe_paid)
+    tamt=str(amt_tobe_paid)
+    v.write(tamt)
     v.close()
     
 
