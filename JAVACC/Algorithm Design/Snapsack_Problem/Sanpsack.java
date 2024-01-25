@@ -3,7 +3,41 @@ import java.util.Arrays;
 import java.util.Comparator;
 import java.util.Scanner;
 public class Sanpsack{
-        //Declaration of the items
+    //Declaration of the driver class
+    public static void main(String[] args){
+        System.out.print("\033[H\033[2J");  //codes to clear the screen
+        System.out.flush();
+        //Program starts
+        System.out.println("\n\n\t\t\t\t\t\t\t\t\t\tPROGRAM EXECUTION ");
+        System.out.println("\t\t\t\t\t\t\t\t\t\t-----------------");
+        int a;
+        //Getting input from the user
+        // *Try block is not used because it produces an error that it may not have intialized the array while using the array in the function*
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter the capacity of the bag : ");
+        int capacity=scanner.nextInt();
+        System.out.print("Enter the number of items : ");
+        a = scanner.nextInt();
+        item[] arr=new item[a];
+        for(int i=0;i<a;i++){
+            System.out.println("Enter the Properties of the item "+(i+1)+" :- ");
+            System.out.print("Value : ");
+            int value = scanner.nextInt();
+            System.out.print("Weight : ");
+            int weigth = scanner.nextInt();
+            arr[i]=new item(value,weigth);
+            System.out.println("-----------------------------------------------");
+        }
+        scanner.close();
+        //Performing operations
+        double d = HighPossibleSum(arr,capacity);
+        //Printing the result
+        System.out.println("\t\t\t\t\t\t\t\t\t*** -------------------------------------------------------------***");
+        System.out.println("\t\t\t\t\t\t\t\t\t    |    The maximum profit with the capacity of "+capacity+" is : "+d+"    |");
+        System.out.println("\t\t\t\t\t\t\t\t\t    -------------------------------------------------------------");
+    }
+
+     //Declaration of the items
     static class item{
         int Value,Weigth;
         public item(int Value,int Weight){
@@ -46,33 +80,5 @@ public class Sanpsack{
             }
         }
         return HighPossibleSum;
-    }
-    //Declaration of the driver class
-    public static void main(String[] args){
-        System.out.print("\033[H\033[2J");  // ANSI escape codes to clear the screen
-        System.out.flush();
-        System.out.println("\n\n\t\t\t\t\t\t\t\t\t\tPROGRAM EXECUTION ");
-        System.out.println("\t\t\t\t\t\t\t\t\t\t-----------------");
-        int a;
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("Enter the capacity of the bag : ");
-        int capacity=scanner.nextInt();
-        System.out.print("Enter the number of items : ");
-        a = scanner.nextInt();
-        item[] arr=new item[a];
-        for(int i=0;i<a;i++){
-            System.out.println("Enter the Properties of the item "+(i+1)+" :- ");
-            System.out.print("Value : ");
-            int value = scanner.nextInt();
-            System.out.print("Weight : ");
-            int weigth = scanner.nextInt();
-            arr[i]=new item(value,weigth);
-            System.out.println("-----------------------------------------------");
-        }
-        scanner.close();
-        double d = HighPossibleSum(arr,capacity);
-        System.out.println("\t\t\t\t\t\t\t\t\t*** -------------------------------------------------------------***");
-        System.out.println("\t\t\t\t\t\t\t\t\t    |    The maximum profit with the capacity of "+capacity+" is : "+d+"    |");
-        System.out.println("\t\t\t\t\t\t\t\t\t    -------------------------------------------------------------");
     }
 }
