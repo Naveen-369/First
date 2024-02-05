@@ -77,16 +77,23 @@ public class Huffman {
 
         //Call the PrintData Function to get the Encoded signals
         PrintData(root,"");
+        
+        StringBuffer ginger=new StringBuffer();
+        for(int i=0;i<sentence.length();i++){
+            ginger.append(encodedSignals.get(sentence.charAt(i)));
+        }
+        ginger.toString();
+        System.out.println(ginger);
     }
-
+    static Map<Character,String> encodedSignals=new HashMap<Character,String>(6);
     //Declaration of the function
     public static void PrintData(HNode node,String path){
         if(node.left==null && node.right==null && Character.isLetter(node.c)){
             System.out.println(node.c+" : "+path);
+            encodedSignals.put(node.c, path);
             return;
         }
         PrintData(node.left, path+"0");
         PrintData(node.right, path+"1");
     }
-    
 }
