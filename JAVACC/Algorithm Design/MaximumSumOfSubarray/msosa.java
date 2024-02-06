@@ -1,8 +1,7 @@
 package MaximumSumOfSubarray;
 import java.util.Arrays;
 import java.util.Scanner;
-/* The following is the procedure for the implementation of the Maximum subarray problem*/
-/*The concept
+/*
 *Create a function that is executed repeatedly and finds the lss,rss and css only if it is minimum
 */
 public class msosa{
