@@ -17,7 +17,7 @@ public class NQueens {
         int n=Chess_Board[0].length;
         int r=row;
         int c=column;
-        //Declaraion for the column
+        //Declaraion for the Row
         for(int i=0;i<n;i++){
             if(Chess_Board[r][i]=='Q') return false;
         }
@@ -28,37 +28,13 @@ public class NQueens {
             if(Chess_Board[i][c]=='Q') return false;
         }
         //Declaration for the diagonals
-        //Upper - Right
-        r=row;
-        c=column;
-        while(r>=0 && c<n){
-            if(Chess_Board[r][c]=='Q') return false;
-            r--;
-            c++;
-        }
-        //Lower - Rigth
-        r=row;
-        c=column;
-        while(r<n && c<n){
-            if(Chess_Board[r][c]=='Q') return false;
-            r++;
-            c++;
-        }
-        //Upper - Left
-        r=row;
-        c=column;
-        while(r>=0 && c>=0){
-            if(Chess_Board[r][c]=='Q') return false;
-            r--;
-            c--;
-        }
-        //Upper - Right
-        r=row;
-        c=column;
-        while(r<n && c>=0){
-            if(Chess_Board[r][c]=='Q') return false;
-            r++;
-            c--;
+        for(int i=0;i<n;i++){
+            for(int j =0;j<n;j++){
+                if((i-j==row-column) || (i+j==row+column)){
+                    if(Chess_Board[i][j]=='Q')
+                        return false;
+                }
+            }
         }
         //Declaration of the over condition
         return true;
