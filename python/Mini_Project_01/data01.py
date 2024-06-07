@@ -1,0 +1,18 @@
+quest=("Expansion Of CPU ?",
+       "Expansion of UNO ?",
+       "What is the name of the father of Indian nation ?",
+       "What is the name of the National Bird of US ?",
+       "What is the state animal of Tamil Nadu ?",
+       "What is the name of spy agency of india ? ",
+       "What is the pink city of india ?",
+       "Who is the Cheif Minister of Tamil Nadu ?",
+       "Where is the the pen statue planned to be constucted ?")
+answer=("Central Processing Unit",
+        "United National Organization",
+        "Mahatma Gandhi",
+        "Eagle",
+        "Malai Aadu",
+        "RAW Reasearch and Analysis Wing",
+        "Jaipur",
+        "M.K.stalin",
+        "Marina Seashore")
